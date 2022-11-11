@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+$black : hsl(0, 0%, 0%);
+$White : hsl(0, 0%, 100%);
+$Dark-Gray : hsl(0, 0%, 55%);
+$Very-Dark-Gray : hsl(0, 0%, 55%);
+
+*{
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+  }
+  .btn-close{
+    background-color: white;
+  }
+}
+
+
+//hero section
+.hero {
+  background: rgba(1, 1, 1, 0.288) url('../images/desktop/image-hero.jpg') no-repeat;
+  background-size: cover;
+  background-blend-mode:multiply;
+  
+}
+
+.nav-p1{
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  .h1{
+    font-weight: bolder;
+    
+  }
+  .h2{
+    color: $White;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+  }
+  .h2:hover{
+    color: white;
+    border-bottom-color: $White;
+    transition: all .3s ease-in;
+  }
+
+}
+.c-cont{
+  h1{
+    text-transform: uppercase;
+
+    color: $White;
+    font-size: 5rem;
+    border: 2px solid $White;
+  }
+}
+
+//about section 
+.about-section{
+  position: relative;
+  .text{
+    position: absolute;
+    width: 50%;
+    top:220px;
+    left: 600px;
+    bottom: -20px;
+
+    h1{
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    p{
+      color: $Dark-Gray;
+    }
+  }
+}
+
+//creation section
+.items{
+  .bt-mb{
+    display: none;
+  }
+}
+.c-col{
+  position: relative;
+  img{
+    object-fit: cover;
+  }
+  .title{
+    color: $White;
+    bottom: 0;
+    position: absolute;
+  }
+}
+.c-col:hover{
+  cursor: pointer;
+  .title{
+    color: $black;
+  }
+  img{
+    filter: blur(1px) opacity(67%);
+  }
+}
+
+//footer section
+
+.footer-section{
+  background-color: $black;
+  color: white;
+  p{
+    color: $Very-Dark-Gray;
+  }
+  button{
+    background-color: transparent;
+    border: none;
+    color: $White;
+    border-bottom: 2px solid transparent;
+  }
+  button:hover{
+    color: $White;
+    border-bottom-color: $White;
+    transition: all .3s ease-in;
+  }
+
+}
+
+//ipad Screen
+
+@media screen and (max-width: 1200px){
+  //hero
+
+  .hero {
+    background: rgba(1, 1, 1, 0.288) url('../images/mobile/image-hero.jpg') no-repeat center;
+    background-size: cover;
+  }
+  .c-cont{
+    h1{
+      width: 100%;
+      font-size: 1.9rem;
+    }
+  }
+
+  //about 
+  .about-section{
+    .text{
+      position: static;
+      width: 100%;
+      h1{
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .header{
+    .bt-dp{
+      display: none;
+    }
+  }
+  .items{
+    .bt-mb{
+      display: block;
+    }
+  }
+
+}

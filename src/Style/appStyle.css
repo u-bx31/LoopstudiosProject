@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+}
+body h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+body .btn-close {
+  background-color: white;
+}
+
+.hero {
+  background: rgba(1, 1, 1, 0.288) url("../images/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.nav-p1 {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+.nav-p1 .h1 {
+  font-weight: bolder;
+}
+.nav-p1 .h2 {
+  color: hsl(0deg, 0%, 100%);
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+}
+.nav-p1 .h2:hover {
+  color: white;
+  border-bottom-color: hsl(0deg, 0%, 100%);
+  transition: all 0.3s ease-in;
+}
+
+.c-cont h1 {
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 5rem;
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+
+.about-section {
+  position: relative;
+}
+.about-section .text {
+  position: absolute;
+  width: 50%;
+  top: 220px;
+  left: 600px;
+  bottom: -20px;
+}
+.about-section .text h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.about-section .text p {
+  color: hsl(0deg, 0%, 55%);
+}
+
+.items .bt-mb {
+  display: none;
+}
+
+.c-col {
+  position: relative;
+}
+.c-col img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-col .title {
+  color: hsl(0deg, 0%, 100%);
+  bottom: 0;
+  position: absolute;
+}
+
+.c-col:hover {
+  cursor: pointer;
+}
+.c-col:hover .title {
+  color: hsl(0deg, 0%, 0%);
+}
+.c-col:hover img {
+  filter: blur(1px) opacity(67%);
+}
+
+.footer-section {
+  background-color: hsl(0deg, 0%, 0%);
+  color: white;
+}
+.footer-section p {
+  color: hsl(0deg, 0%, 55%);
+}
+.footer-section button {
+  background-color: transparent;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  border-bottom: 2px solid transparent;
+}
+.footer-section button:hover {
+  color: hsl(0deg, 0%, 100%);
+  border-bottom-color: hsl(0deg, 0%, 100%);
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    background: rgba(1, 1, 1, 0.288) url("../images/mobile/image-hero.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .c-cont h1 {
+    width: 100%;
+    font-size: 1.9rem;
+  }
+  .about-section .text {
+    position: static;
+    width: 100%;
+  }
+  .about-section .text h1 {
+    font-size: 1.8rem;
+  }
+  .header .bt-dp {
+    display: none;
+  }
+  .items .bt-mb {
+    display: block;
+  }
+}/*# sourceMappingURL=appStyle.css.map */
