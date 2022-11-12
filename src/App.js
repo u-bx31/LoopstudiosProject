@@ -55,7 +55,7 @@ function App() {
         <Navbar />
         <div className="c-cont container w-100 p-xs-1 p-4 my-lg-5 mt-lg-0 mt-5 py-5">
           <div className="row row-cols-1">
-            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0" data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out">
+            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out">
               <h1 className='py-sm-1 text-break py-4 px-xs-0 px-2 my-xs-3 my-5 fs-sm-0' >Immersive experiences that deliver</h1>
             </div>
           </div>
