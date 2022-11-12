@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Navbar from './Component/Navbar'
 import AOS from 'aos'
+import data from './Data/data'
 import 'aos/dist/aos.css'
 import { ReactComponent as FacebookLogo } from './images/icon-facebook.svg'
 import { ReactComponent as Logo } from './images/logo.svg'
@@ -8,16 +9,7 @@ import { ReactComponent as IsntagramLogo } from './images/icon-instagram.svg'
 import { ReactComponent as PintrestLogo } from './images/icon-pinterest.svg'
 import { ReactComponent as TwitterLogo } from './images/icon-twitter.svg'
 
-const data = [
-  { title: 'DEEP EARTH', image: 'image-deep-earth.jpg' },
-  { title: 'Night arcade', image: 'image-night-arcade.jpg' },
-  { title: 'Soccer team VR', image: 'image-soccer-team.jpg' },
-  { title: 'The grid', image: 'image-grid.jpg' },
-  { title: 'From up above VR', image: 'image-from-above.jpg' },
-  { title: 'Pocket borealis', image: 'image-pocket-borealis.jpg' },
-  { title: 'The curiosity', image: 'image-curiosity.jpg' },
-  { title: 'Make it fisheye', image: 'image-fisheye.jpg' }
-]
+
 
 
 function App() {
@@ -25,9 +17,13 @@ function App() {
 
   const [size, setSize] = useState(window.innerWidth)
 
+  const openLink = (url)=>{
+    window.open(url,'_blank','noopener,noreferrer');
+  };
+
   useEffect(() => {
     AOS.init();
-  },[])
+  }, [])
   useEffect(() => {
     const chekSize = () => {
       setSize(window.innerWidth)
@@ -55,7 +51,7 @@ function App() {
         <Navbar />
         <div className="c-cont container w-100 p-xs-1 p-4 my-lg-5 mt-lg-0 mt-5 py-5">
           <div className="row row-cols-1">
-            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out">
+            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-once='true'>
               <h1 className='py-sm-1 text-break py-4 px-xs-0 px-2 my-xs-3 my-5 fs-sm-0' >Immersive experiences that deliver</h1>
             </div>
           </div>
@@ -68,11 +64,11 @@ function App() {
         <div className="container p-sm-5 p-3 mt-lg-5 mt-3">
           <div className="about-section d-flex flex-column w-100 my-5">
             <div className="image" data-aos="zoom-in"
-              data-aos-duration="1000">
+              data-aos-duration="1000" data-aos-once='true'>
               <img className='img-fluid' src={require(`./images/desktop/image-interactive.jpg`)} alt="" />
             </div>
             <div className="text bg-white p-sm-5 m-sm-2 m-0 p-4 text-lg-start text-center" data-aos="fade-right"
-              data-aos-duration="2000">
+              data-aos-duration="2000" data-aos-once='true'>
               <h1>The leader in interactive VR</h1>
               <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
                 projects for some of the best companies around the globe. Our award-winning
@@ -84,16 +80,16 @@ function App() {
           {/* ---------Creation Section---------*/}
           <div className="Creation-section mt-5 ">
             <div className="header d-flex justify-content-lg-between justify-content-center" data-aos="fade-up"
-              data-aos-anchor-placement="center-bottom" data-aos-delay="500"  >
+              data-aos-anchor-placement="center-bottom" data-aos-delay="400" data-aos-once='true'  >
               <h1 className='fw-bold'>OUR CREATIONS</h1>
               <button className='btn btn-outline-dark w-25 bt-dp'>SEE ALL</button>
             </div>
             <div className="items my-sm-5 my-2">
               <div className="row justify-content-center" >
-                {data.map((item,index) => {
+                {data.map((item, index) => {
                   const { title, image } = item;
                   return (
-                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100' data-aos-delay="700">
+                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100' data-aos-delay="500" >
                       <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/${image}`)} className='rounded-2 w-100 ' alt="" />
                       <div className="title">
                         <h1 className='w-75 mx-auto'>{title}</h1>
@@ -131,9 +127,13 @@ function App() {
                 <p>© 2021 Loopstudios. All rights reserved.</p>
               </div>
             </div>
+            <div>
+              Challenge by <button onClick={()=>openLink('https://www.frontendmentor.io/challenges')}>Frontend Mentor</button>
+              Coded by <button onClick={()=>openLink('https://www.frontendmentor.io/profile/u-bx31')}>OussamaLabchari/u_bx31</button>
+            </div>
           </div>
-
         </div>
+
       </footer>
     </>
 
