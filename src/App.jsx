@@ -1,13 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import Navbar from './Component/Navbar'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { ReactComponent as FacebookLogo } from './images/icon-facebook.svg'
 import { ReactComponent as Logo } from './images/logo.svg'
 import { ReactComponent as IsntagramLogo } from './images/icon-instagram.svg'
 import { ReactComponent as PintrestLogo } from './images/icon-pinterest.svg'
 import { ReactComponent as TwitterLogo } from './images/icon-twitter.svg'
 
-
+const data = [
+  { title: 'DEEP EARTH', image: 'image-deep-earth.jpg' },
+  { title: 'Night arcade', image: 'image-night-arcade.jpg' },
+  { title: 'Soccer team VR', image: 'image-soccer-team.jpg' },
+  { title: 'The grid', image: 'image-grid.jpg' },
+  { title: 'From up above VR', image: 'image-from-above.jpg' },
+  { title: 'Pocket borealis', image: 'image-pocket-borealis.jpg' },
+  { title: 'The curiosity', image: 'image-curiosity.jpg' },
+  { title: 'Make it fisheye', image: 'image-fisheye.jpg' }
+]
 
 
 function App() {
@@ -15,7 +25,9 @@ function App() {
 
   const [size, setSize] = useState(window.innerWidth)
 
-
+  useEffect(() => {
+    AOS.init();
+  },[])
   useEffect(() => {
     const chekSize = () => {
       setSize(window.innerWidth)
@@ -41,10 +53,10 @@ function App() {
       <section className="hero p-lg-5 p-0" >
         {/* <img src={HeroImage}  alt="" /> */}
         <Navbar />
-        <div class="c-cont container w-100 p-xs-1 p-4 my-lg-5 mt-lg-0 mt-5 py-5">
+        <div className="c-cont container w-100 p-xs-1 p-4 my-lg-5 mt-lg-0 mt-5 py-5">
           <div className="row row-cols-1">
-            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0">
-              <h1 className='py-sm-1 text-break py-4 px-xs-0 px-2 my-xs-3 my-5 fs-sm-0'>Immersive experiences that deliver</h1>
+            <div className="col-md-7 mx-md-auto mx-auto mx-lg-0" data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out">
+              <h1 className='py-sm-1 text-break py-4 px-xs-0 px-2 my-xs-3 my-5 fs-sm-0' >Immersive experiences that deliver</h1>
             </div>
           </div>
 
@@ -55,10 +67,12 @@ function App() {
         {/* ---------About Section---------*/}
         <div className="container p-sm-5 p-3 mt-lg-5 mt-3">
           <div className="about-section d-flex flex-column w-100 my-5">
-            <div className="image">
+            <div className="image" data-aos="zoom-in"
+              data-aos-duration="1000">
               <img className='img-fluid' src={require(`./images/desktop/image-interactive.jpg`)} alt="" />
             </div>
-            <div className="text bg-white p-sm-5 m-sm-2 m-0 p-4 text-lg-start text-center">
+            <div className="text bg-white p-sm-5 m-sm-2 m-0 p-4 text-lg-start text-center" data-aos="fade-right"
+              data-aos-duration="2000">
               <h1>The leader in interactive VR</h1>
               <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
                 projects for some of the best companies around the globe. Our award-winning
@@ -69,60 +83,24 @@ function App() {
 
           {/* ---------Creation Section---------*/}
           <div className="Creation-section ">
-            <div className="header d-flex justify-content-lg-between justify-content-center">
+            <div className="header d-flex justify-content-lg-between justify-content-center" data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" data-aos-delay="300"  >
               <h1 className='fw-bold'>OUR CREATIONS</h1>
               <button className='btn btn-outline-dark w-25 bt-dp'>SEE ALL</button>
             </div>
             <div className="items my-sm-5 my-2">
-              <div className="row justify-content-center">
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-deep-earth.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-night-arcade.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-soccer-team.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-grid.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-from-above.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-pocket-borealis.jpg`)} className='rounded-2 w-100 ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-curiosity.jpg`)} className='rounded-2 w-100  ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
-                <div className="col-auto c-col m-3 ">
-                  <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/image-fisheye.jpg`)} className='rounded-2 w-100  ' alt="" />
-                  <div className="title">
-                    <h1 className='w-50 mx-auto'>DEEP EARTH</h1>
-                  </div>
-                </div>
+              <div className="row justify-content-center" >
+                {data.map((item,index) => {
+                  const { title, image } = item;
+                  return (
+                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100'>
+                      <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/${image}`)} className='rounded-2 w-100 ' alt="" />
+                      <div className="title">
+                        <h1 className='w-75 mx-auto'>{title}</h1>
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
               <button className='btn btn-outline-dark w-50 mx-auto bt-mb'>SEE ALL</button>
             </div>
