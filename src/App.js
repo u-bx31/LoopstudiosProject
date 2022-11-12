@@ -84,7 +84,7 @@ function App() {
           {/* ---------Creation Section---------*/}
           <div className="Creation-section mt-5 ">
             <div className="header d-flex justify-content-lg-between justify-content-center" data-aos="fade-up"
-              data-aos-anchor-placement="center-bottom" data-aos-delay="400"  >
+              data-aos-anchor-placement="center-bottom" data-aos-delay="500"  >
               <h1 className='fw-bold'>OUR CREATIONS</h1>
               <button className='btn btn-outline-dark w-25 bt-dp'>SEE ALL</button>
             </div>
@@ -93,7 +93,7 @@ function App() {
                 {data.map((item,index) => {
                   const { title, image } = item;
                   return (
-                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100' data-aos-delay="600">
+                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100' data-aos-delay="700">
                       <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/${image}`)} className='rounded-2 w-100 ' alt="" />
                       <div className="title">
                         <h1 className='w-75 mx-auto'>{title}</h1>
