@@ -30,10 +30,10 @@ Users should be able to:
 ![Desktop Screen](/src/images/screenShot/loopstudios031.png)
 
 - Mobile Screen :
-![Desktop Screen](/src/images/screenShot/loopstudios031.mobile.png)
+![Mobile Screen](/src/images/screenShot/loopstudios031.mobile.png)
 
 - Ipad Screen :
-![Desktop Screen](/src/images/screenShot/loopstudios031.iPad.png)
+![Ipad Screen](/src/images/screenShot/loopstudios031.iPad.png)
 
 
 **Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
