@@ -85,7 +85,7 @@ function App() {
               <button className='btn btn-outline-dark w-25 bt-dp'>SEE ALL</button>
             </div>
             <div className="items my-sm-5 my-2">
-              <div className="row justify-content-center"  data-aos="zoom-in" data-aos-once='true' data-aos-delay="500" >
+              <div className="row justify-content-center"  data-aos="zoom-out-up" data-aos-once='true' data-aos-delay="600" >
                 {data.map((item, index) => {
                   const { title, image } = item;
                   return (
