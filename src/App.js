@@ -85,11 +85,11 @@ function App() {
               <button className='btn btn-outline-dark w-25 bt-dp'>SEE ALL</button>
             </div>
             <div className="items my-sm-5 my-2">
-              <div className="row justify-content-center" >
+              <div className="row justify-content-center"  data-aos="zoom-in" data-aos-once='true' data-aos-delay="500" >
                 {data.map((item, index) => {
                   const { title, image } = item;
                   return (
-                    <div className="col-auto c-col m-3 " data-aos="zoom-in" key={index} data-aos-offset='100' data-aos-delay="500" >
+                    <div className="col-auto c-col m-3 "key={index} >
                       <img src={require(`./images/${!mobile ? 'desktop' : 'mobile'}/${image}`)} className='rounded-2 w-100 ' alt="" />
                       <div className="title">
                         <h1 className='w-75 mx-auto'>{title}</h1>
