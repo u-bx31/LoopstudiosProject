@@ -25,7 +25,7 @@ function OffcanvasExample() {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link href="#" className='h2 px-3'>ABOUT</Nav.Link>
+                            <Nav.Link href="#" className='h2 px-3'>ABOUT1</Nav.Link>
                             <Nav.Link href="#" className='h2 px-3'>CAREERS</Nav.Link>
                             <Nav.Link href="#" className='h2 px-3'>EVENTS</Nav.Link>
                             <Nav.Link href="#" className='h2 px-3'>PRODUCTS</Nav.Link>
